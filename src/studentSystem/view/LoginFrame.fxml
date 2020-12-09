@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentSystem.controller.LoginController">
+    <children>
+        <VBox layoutX="151.0" layoutY="-2.0" prefHeight="600.0" prefWidth="693.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="173.0" prefWidth="693.0">
+                    <children>
+                        <Label fx:id="systemName" alignment="CENTER" prefHeight="97.0" prefWidth="502.0" text=" 学生管理系统" textAlignment="JUSTIFY">
+                            <font>
+                                <Font name="System Bold" size="50.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="87.0" prefWidth="693.0">
+                    <children>
+                        <Label fx:id="userNameLabel" prefHeight="40.0" prefWidth="89.0" text="用户名：" />
+                        <TextField fx:id="username" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="76.0" prefWidth="693.0">
+                    <children>
+                        <Label fx:id="passwordLabel" prefHeight="40.0" prefWidth="90.0" text="密码：" />
+                        <PasswordField fx:id="password" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="62.0" prefWidth="693.0">
+                    <children>
+                        <Label fx:id="identityLabel" prefHeight="37.0" prefWidth="66.0" text="身份：">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin></Label>
+                        <ComboBox fx:id="comboBox" prefWidth="150.0" promptText="请选择">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></ComboBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="116.0" prefWidth="693.0">
+                    <children>
+                        <Button fx:id="login" mnemonicParsing="false" onAction="#loginEvent" prefHeight="40.0" prefWidth="90.0" text="登陆">
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="reset" mnemonicParsing="false" onAction="#resetEvent" prefHeight="40.0" prefWidth="90.0" text="重置">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

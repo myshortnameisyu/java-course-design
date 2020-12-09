@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="565.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentSystem.controller.teacher.QueryAllSubjectController">
+    <children>
+        <VBox prefHeight="565.0" prefWidth="1000.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="67.0" prefWidth="1000.0">
+                    <children>
+                        <Label fx:id="rankLabel" prefHeight="47.0" prefWidth="359.0" text="  成  绩  排  名" textAlignment="JUSTIFY" textOverrun="CLIP">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="51.0" prefWidth="1000.0">
+                    <children>
+                        <Label fx:id="queryNameLabel" prefHeight="20.0" prefWidth="70.0" text="姓名：" />
+                        <TextField fx:id="inputName" prefHeight="30.0" prefWidth="92.0" />
+                        <Label fx:id="queryStudentNumLabel" prefHeight="20.0" prefWidth="70.0" text="学号：">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="inputStudentNum" prefHeight="30.0" prefWidth="146.0" />
+                        <Button fx:id="queryButton" mnemonicParsing="false" onAction="#queryInfo" prefHeight="30.0" prefWidth="80.0" text="查询">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="resetQueryButton" mnemonicParsing="false" onAction="#resetQuery" prefHeight="30.0" prefWidth="80.0" text="重置">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="dowmSortButton" mnemonicParsing="false" onAction="#upSortSubject" prefHeight="30.0" prefWidth="80.0" text="降序">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="upSortButton" mnemonicParsing="false" onAction="#dwonSort" prefHeight="30.0" prefWidth="80.0" text="升序">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="256.0" prefWidth="1000.0">
+                    <children>
+                        <TableView fx:id="studentSubjectTableView" prefHeight="449.0" prefWidth="899.0">
+                            <columns>
+                                <TableColumn fx:id="studentNumTableColumn" prefWidth="120.0" text="学号" />
+                                <TableColumn fx:id="nameTableColumn" prefWidth="90.0" text="姓名" />
+                                <TableColumn fx:id="sexTableColumn" prefWidth="90.0" text="性别" />
+                                <TableColumn fx:id="ageTableColumn" prefWidth="75.0" text="年龄" />
+                                <TableColumn fx:id="chineseTableColumn" prefWidth="75.0" text="语文" />
+                                <TableColumn fx:id="mathTableColumn" prefWidth="75.0" text="数学" />
+                                <TableColumn fx:id="englishTableColumn" prefWidth="75.0" text="英语" />
+                                <TableColumn fx:id="physicsTableColumn" prefWidth="75.0" text="物理" />
+                                <TableColumn fx:id="chemistryTableColumn" prefWidth="75.0" text="化学" />
+                                <TableColumn fx:id="biologyTableColumn" prefWidth="75.0" text="生物" />
+                                <TableColumn fx:id="sumTableColumn" prefWidth="75.0" text="总分" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="140.0" prefWidth="1000.0">
+                    <children>
+                        <VBox prefHeight="122.0" prefWidth="1000.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="137.0" prefWidth="1000.0">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="137.0" prefWidth="90.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="studentNumLabel" prefHeight="20.0" prefWidth="80.0" text="学号：" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="chineseLabel" prefHeight="20.0" prefWidth="80.0" text="语文：" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="chemistryLabel" prefHeight="20.0" prefWidth="80.0" text="化学：" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER" prefHeight="129.0" prefWidth="137.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formStudentNum" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formChinese" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formChemistry" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER" prefHeight="137.0" prefWidth="69.0">
+                                            <HBox.margin>
+                                                <Insets left="20.0" />
+                                            </HBox.margin>
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="nameLabel" prefHeight="20.0" prefWidth="80.0" text="姓名：" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="mathLabel" prefHeight="20.0" prefWidth="80.0" text="数学：" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="biologyLabel" prefHeight="20.0" prefWidth="80.0" text="生物：" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox prefHeight="137.0" prefWidth="127.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formName" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formMath" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formBiology" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox prefHeight="137.0" prefWidth="64.0">
+                                            <HBox.margin>
+                                                <Insets left="20.0" />
+                                            </HBox.margin>
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="sexLabel" prefHeight="20.0" prefWidth="80.0" text="性别" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="englishLabel" prefHeight="20.0" prefWidth="80.0" text="英语：" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="sumLabel" prefHeight="20.0" prefWidth="80.0" text="总分：" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox prefHeight="137.0" prefWidth="124.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <RadioButton fx:id="formMan" mnemonicParsing="false" text="男" />
+                                                        <RadioButton fx:id="formWoman" mnemonicParsing="false" text="女">
+                                                            <HBox.margin>
+                                                                <Insets left="20.0" />
+                                                            </HBox.margin>
+                                                        </RadioButton>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formEnglish" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formSum" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox prefHeight="137.0" prefWidth="80.0">
+                                            <HBox.margin>
+                                                <Insets left="20.0" />
+                                            </HBox.margin>
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="ageLabel" prefHeight="20.0" prefWidth="80.0" text="年龄：" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label fx:id="physicsLabel" prefHeight="20.0" prefWidth="80.0" text="物理：" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" />
+                                            </children>
+                                        </VBox>
+                                        <VBox prefHeight="200.0" prefWidth="124.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formAge" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <TextField fx:id="formPhysics" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="51.0" prefWidth="1000.0">
+                    <children>
+                        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateSubject" prefHeight="30.0" prefWidth="100.0" text="修改" />
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteSubject" prefHeight="30.0" prefWidth="100.0" text="删除">
+                            <HBox.margin>
+                                <Insets left="120.0" right="120.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="resetUpdateButton" mnemonicParsing="false" onAction="#resetUpdate" prefHeight="30.0" prefWidth="100.0" text="重置" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

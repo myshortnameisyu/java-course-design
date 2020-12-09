@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="studentSystem.controller.student.StudentMainController">
+    <children>
+        <MenuBar layoutY="-2.0" prefHeight="35.0" prefWidth="1000.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="查询菜单">
+                    <items>
+                        <MenuItem fx:id="queryPerRank" onAction="#queryPerRankEvent" mnemonicParsing="false"
+                                  text="查询个人排名"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="个人中心">
+                    <items>
+                        <MenuItem fx:id="exitItem" mnemonicParsing="false" onAction="#exitSystem" text="退出系统"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="关于">
+                    <items>
+                        <MenuItem fx:id="showDesc" mnemonicParsing="false" text="简介"/>
+                        <MenuItem fx:id="callUs" mnemonicParsing="false" text="联系我们"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane fx:id="mainFrameAnchorPane" layoutY="32.0" prefHeight="565.0" prefWidth="1000.0">
+            <children>
+                <HBox prefHeight="565.0" prefWidth="1000.0" alignment="CENTER">
+                    <children>
+                        <ImageView fx:id="backgroundView" fitHeight="565.0" fitWidth="1000.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

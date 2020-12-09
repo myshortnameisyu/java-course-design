@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="565.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentSystem.controller.admin.AddTeacherController">
+   <children>
+      <VBox prefHeight="565.0" prefWidth="1000.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="68.0" prefWidth="1000.0">
+               <children>
+                  <Label fx:id="addTeacherLabel" prefHeight="51.0" prefWidth="273.0" text="  添  加  教  师">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="448.0" prefWidth="1000.0">
+               <children>
+                  <VBox prefHeight="431.0" prefWidth="84.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="105.0">
+                           <children>
+                              <Label fx:id="workNumLabel" prefHeight="20.0" prefWidth="80.0" text="职工号：" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="105.0">
+                           <children>
+                              <Label fx:id="usernameLabel" prefHeight="20.0" prefWidth="80.0" text="用户名：" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="105.0">
+                           <children>
+                              <Label fx:id="passwordLabel" prefHeight="20.0" prefWidth="80.0" text="密码：" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="105.0">
+                           <children>
+                              <Label fx:id="nameLabel" prefHeight="20.0" prefWidth="80.0" text="姓名：" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="105.0">
+                           <children>
+                              <Label fx:id="sexLabel" prefHeight="20.0" prefWidth="80.0" text="性别：" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="105.0">
+                           <children>
+                              <Label fx:id="ageLabel" prefHeight="20.0" prefWidth="80.0" text="年龄：" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="105.0">
+                           <children>
+                              <Label fx:id="phoneLabel" prefHeight="20.0" prefWidth="80.0" text="联系方式：" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="431.0" prefWidth="299.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="inputWorkNum" prefHeight="30.0" prefWidth="280.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="inputUsername" prefHeight="30.0" prefWidth="280.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="200.0">
+                           <children>
+                              <PasswordField fx:id="inputPassword" prefHeight="30.0" prefWidth="280.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="inputName" prefHeight="30.0" prefWidth="280.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton fx:id="inputMan" onAction="#clickMan" mnemonicParsing="false" text="男" />
+                              <RadioButton fx:id="inputWoman" onAction="#clickWoman" mnemonicParsing="false" text="女">
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="inputAge" prefHeight="30.0" prefWidth="280.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="inputPhone" prefHeight="30.0" prefWidth="280.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addButton" onAction="#addTaecher" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="添加">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="resetButton" onAction="#reset" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="重置">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
