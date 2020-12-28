@@ -76,32 +76,32 @@ public class LoginController {
     @FXML
     public void loginEvent(ActionEvent event) throws IOException {
         stage.close();
-        new Main().initTeacherMainFrame();
+//        new Main().initTeacherMainFrame();
 //        new Main().initStudentMainFrame();
 //        new Main().initAdminMainFrame();
-
-//            Student student = StudentTool.getStudentByUserName(username.getText());
-//            boolean isOk = simpleTools.isStudentLogin(username.getText(), password.getText(), student);
-//            if (isOk){
-//                new Main().initStudentMainFrame();
-//            }
-//        }
-//        if (comboBox.getValue().equals("教师")){
-//            Teacher teacher = TeacherTool.getTeacherByUserName(username.getText());
-//            boolean isOk = simpleTools.isTeacherLogin(username.getText(), password.getText(), teacher);
-//            if (isOk){
-//                System.out.println(111);
-//                Main.threadLocal.set(teacher);
-//                new Main().initTeacherMainFrame();
-//            }
-//        }
-//        if (comboBox.getValue().equals("管理员")){
-//            Admin admin = AdminTool.getAdminByUsername(username.getText());
-//            boolean isOk = simpleTools.isAdminLogin(username.getText(), password.getText(), admin);
-//            if (isOk){
-//                new Main().initAdminMainFrame();
-//            }
-//        }
+        if(comboBox.getValue().equals("学生")){
+            Student student = StudentTool.getStudentByUserName(username.getText());
+            boolean isOk = simpleTools.isStudentLogin(username.getText(), password.getText(), student);
+            if (isOk){
+                new Main().initStudentMainFrame();
+            }
+        }
+        if (comboBox.getValue().equals("教师")){
+            Teacher teacher = TeacherTool.getTeacherByUserName(username.getText());
+            boolean isOk = simpleTools.isTeacherLogin(username.getText(), password.getText(), teacher);
+            if (isOk){
+                System.out.println(111);
+                Main.threadLocal.set(teacher);
+                new Main().initTeacherMainFrame();
+            }
+        }
+        if (comboBox.getValue().equals("管理员")){
+            Admin admin = AdminTool.getAdminByUsername(username.getText());
+            boolean isOk = simpleTools.isAdminLogin(username.getText(), password.getText(), admin);
+            if (isOk){
+                new Main().initAdminMainFrame();
+            }
+        }
     }
 
 

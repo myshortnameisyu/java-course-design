@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class TeacherTool {
 
     // 模拟数据库
-    private static String file_path = "/Users/dinghu/Documents/JavaProject/javaHomework/src/studentSystem/db/teacher.txt";
+    private static String file_path = "D:\\intellij IDEA\\java-course-design\\src\\studentSystem\\db\\teacher.txt";
 
     /**
      * 读文件

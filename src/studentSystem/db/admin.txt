@@ -1,1 +1,1 @@
-[{"age":22,"id":1,"identity":2,"name":"丁虎1","password":"12345","phone":"17500934981","sex":"女","username":"王五","workNum":"916311"}]
+[{"age":22,"id":1,"identity":2,"name":"丁虎1","password":"12345","phone":"17500934981","sex":"女","username":"root","workNum":"916311"}]

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class AdminTool {
 
     // 模拟数据库
-    private static String file_path = "/Users/dinghu/Documents/JavaProject/javaHomework/src/studentSystem/db/admin.txt";
+    private static String file_path = "D:\\intellij IDEA\\java-course-design\\src\\studentSystem\\db\\admin.txt";
 
     /**
      * 读文件

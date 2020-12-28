@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class SubjectTool {
 
     // 模拟数据库
-    private static String file_path = "/Users/dinghu/Documents/JavaProject/javaHomework/src/studentSystem/db/subject.txt";
+    private static String file_path = "D:\\intellij IDEA\\java-course-design\\src\\studentSystem\\db\\subject.txt";
 
     /**
      * 读文件
