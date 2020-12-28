@@ -1,4 +1,4 @@
-package studentSystem.MyException;
+package studentSystem.myException;
 
 public class SubjectNotFoundException extends Exception {
 

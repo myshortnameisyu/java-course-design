@@ -3,7 +3,7 @@ package studentSystem.controller.admin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import studentSystem.MyException.UserIsExistException;
+import studentSystem.myException.UserIsExistException;
 import studentSystem.pojo.Teacher;
 import studentSystem.utils.SimpleTools;
 import studentSystem.utils.TeacherTool;

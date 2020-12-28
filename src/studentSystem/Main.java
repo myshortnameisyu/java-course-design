@@ -7,12 +7,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import studentSystem.controller.LoginController;
+import studentSystem.pojo.User;
 
 import java.io.IOException;
 
 public class Main extends Application {
 
     private Stage primaryStage;
+
+    public static ThreadLocal<User> threadLocal = new ThreadLocal<>();
 
     @Override
     public void start(Stage primaryStage) throws Exception{

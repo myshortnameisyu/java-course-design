@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="studentSystem.controller.teacher.TeacherMainController">
+    <children>
+        <MenuBar prefHeight="35.0" prefWidth="1000.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="查询">
+                    <items>
+                        <MenuItem fx:id="queryAllStudent" onAction="#teacherQueryStudent" mnemonicParsing="false"
+                                  text="查询所有学生信息"/>
+                        <!--<MenuItem fx:id="queryStudentByNum" mnemonicParsing="false" text="根据学号查询学生信息" />-->
+                        <MenuItem fx:id="queryAllSubject" onAction="#queryAllSubjectEvent" mnemonicParsing="false"
+                                  text="查询所有学生成绩"/>
+                        <!--<MenuItem fx:id="querySubjectByNum" mnemonicParsing="false" text="根据学号查询学生成绩" />-->
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="添加">
+                    <items>
+                        <MenuItem fx:id="addStudentInfo" onAction="#addStudentInfoEvent" mnemonicParsing="false"
+                                  text="添加学生信息"/>
+                        <MenuItem fx:id="addSubjectInfo" onAction="#addSunbjectInfoEvent" mnemonicParsing="false"
+                                  text="添加学生成绩"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="个人中心">
+                    <items>
+                        <!--<MenuItem fx:id="queryTeaInfo" onAction="#queryTeaInfoEvent" mnemonicParsing="false" text="个人信息" />-->
+                        <!--<MenuItem fx:id="updateTeaInfo" onAction="#updateTeaInfo" mnemonicParsing="false" text="修改个人信息" />-->
+                        <MenuItem fx:id="exit" onAction="#exitSystem" mnemonicParsing="false" text="退出系统"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="关于">
+                    <items>
+                        <MenuItem fx:id="showDesc" mnemonicParsing="false" text="简介"/>
+                        <MenuItem fx:id="callUs" mnemonicParsing="false" text="联系我们"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane fx:id="mainFrameAnchorPane" layoutY="35.0" prefHeight="565.0" prefWidth="1000.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="565.0" prefWidth="1000.0">
+                    <children>
+                        <ImageView fx:id="backgroundView" fitHeight="565.0" fitWidth="1000.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

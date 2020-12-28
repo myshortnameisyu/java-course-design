@@ -1,7 +1,7 @@
 package studentSystem.utils;
 
 import com.alibaba.fastjson.JSON;
-import studentSystem.MyException.SubjectNotFoundException;
+import studentSystem.myException.SubjectNotFoundException;
 import studentSystem.pojo.Subject;
 
 import java.io.*;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class SubjectTool {
 
     // 模拟数据库
-    private static String file_path = "D:\\intellij IDEA\\javaHomework\\src\\studentSystem\\db\\subject.txt";
+    private static String file_path = "/Users/dinghu/Documents/JavaProject/javaHomework/src/studentSystem/db/subject.txt";
 
     /**
      * 读文件

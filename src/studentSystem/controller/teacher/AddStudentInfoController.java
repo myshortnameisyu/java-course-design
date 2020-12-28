@@ -3,12 +3,10 @@ package studentSystem.controller.teacher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import studentSystem.MyException.UserIsExistException;
+import studentSystem.myException.UserIsExistException;
 import studentSystem.pojo.Student;
-import studentSystem.pojo.Teacher;
 import studentSystem.utils.SimpleTools;
 import studentSystem.utils.StudentTool;
-import studentSystem.utils.TeacherTool;
 
 import java.io.IOException;
 
@@ -84,6 +82,7 @@ public class AddStudentInfoController {
                 "src/studentSystem/images/age1.png", "src/studentSystem/images/phone1.png",
                 "src/studentSystem/images/add1.png", "src/studentSystem/images/reset.png"};
         simpleTools.setLabeledImage(labeleds, imagePaths);
+//        System.out.println(Main.threadLocal.get());
     }
 
     public void addStudent(ActionEvent actionEvent) throws IOException, UserIsExistException {

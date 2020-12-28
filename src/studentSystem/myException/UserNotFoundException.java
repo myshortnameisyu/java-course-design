@@ -1,8 +1,9 @@
-package studentSystem.MyException;
+package studentSystem.myException;
 
 public class UserNotFoundException extends Exception {
 
     public UserNotFoundException(String message) {
         super(message);
     }
+
 }

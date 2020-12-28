@@ -1,18 +1,10 @@
 package studentSystem;
 
-import studentSystem.MyException.SubjectNotFoundException;
-import studentSystem.MyException.UserIsExistException;
-import studentSystem.MyException.UserNotFoundException;
-import studentSystem.dto.StudentDTO;
-import studentSystem.dto.SubjectDTO;
-import studentSystem.pojo.Admin;
-import studentSystem.pojo.Student;
-import studentSystem.pojo.Subject;
-import studentSystem.pojo.Teacher;
-import studentSystem.utils.*;
+import studentSystem.myException.SubjectNotFoundException;
+import studentSystem.myException.UserIsExistException;
+import studentSystem.myException.UserNotFoundException;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * 测试文件

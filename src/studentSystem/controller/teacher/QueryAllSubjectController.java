@@ -3,11 +3,10 @@ package studentSystem.controller.teacher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import studentSystem.MyException.SubjectNotFoundException;
+import studentSystem.myException.SubjectNotFoundException;
 import studentSystem.dto.SubjectDTOData;
 import studentSystem.pojo.Subject;
 import studentSystem.utils.SimpleTools;
-import studentSystem.utils.StudentTool;
 import studentSystem.utils.SubjectTool;
 
 import java.io.IOException;
@@ -188,7 +187,11 @@ public class QueryAllSubjectController {
                 nameTableColumn, sexTableColumn, ageTableColumn, studentNumTableColumn, chineseTableColumn,
                 mathTableColumn, englishTableColumn, physicsTableColumn, chemistryTableColumn, biologyTableColumn, sumTableColumn);
         studentSubjectTableView.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> showStudentDetail(newValue)
+                (observable, oldValue, newValue) ->  {
+                    if (studentSubjectTableView.getSelectionModel().getSelectedIndex() >= 0){
+                        showStudentDetail(newValue);
+                    }
+                }
         );
     }
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentSystem.controller.admin.AdminMainController">
+    <children>
+        <MenuBar layoutY="-2.0" prefHeight="35.0" prefWidth="1000.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="查询">
+                    <items>
+                        <MenuItem fx:id="queryAllStudent" onAction="#queryAllStudentEvent" mnemonicParsing="false" text="查询所有学生" />
+                        <MenuItem fx:id="queryAllTeacher" onAction="#queryAllTeacherEvent" mnemonicParsing="false" text="查询所有教师" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="添加用户">
+                    <items>
+                        <MenuItem fx:id="addTeacher" onAction="#addTeacherEvent" mnemonicParsing="false" text="添加教师" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="个人中心">
+                    <items>
+                        <!--<MenuItem fx:id="queryAdminInfo" onAction="#queryAdminInfoEvent" mnemonicParsing="false" text="查看个人信息" />-->
+                        <MenuItem fx:id="exitSys" onAction="#exitSystem" mnemonicParsing="false" text="退出系统" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="关于">
+                    <items>
+                        <MenuItem fx:id="showDesc" mnemonicParsing="false" text="简介" />
+                        <MenuItem fx:id="callUs" mnemonicParsing="false" text="联系我们" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <AnchorPane fx:id="mainFrameAnchorPane" layoutY="33.0" prefHeight="565.0" prefWidth="1000.0">
+         <children>
+            <HBox prefHeight="565.0" prefWidth="1000.0" alignment="CENTER">
+               <children>
+                  <ImageView fx:id="backgroundView" fitHeight="565.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

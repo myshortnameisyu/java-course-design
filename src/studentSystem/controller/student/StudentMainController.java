@@ -2,7 +2,6 @@ package studentSystem.controller.student;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Labeled;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -61,10 +60,6 @@ public class StudentMainController {
     }
 
 
-
-
-
-
     /**
      * 查询个人排名
      * @param actionEvent
@@ -75,13 +70,6 @@ public class StudentMainController {
         mainFrameAnchorPane.getChildren().add(pane);
     }
 
-
-
-    public void showDescEvent(ActionEvent actionEvent) {
-    }
-
-    public void showCallUs(ActionEvent actionEvent) {
-    }
 
     /**
      * 退出系统

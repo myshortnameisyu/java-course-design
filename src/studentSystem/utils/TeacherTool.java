@@ -1,8 +1,8 @@
 package studentSystem.utils;
 
 import com.alibaba.fastjson.JSON;
-import studentSystem.MyException.UserIsExistException;
-import studentSystem.MyException.UserNotFoundException;
+import studentSystem.myException.UserIsExistException;
+import studentSystem.myException.UserNotFoundException;
 import studentSystem.pojo.Teacher;
 
 import java.io.*;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class TeacherTool {
 
     // 模拟数据库
-    private static String file_path = "D:\\intellij IDEA\\javaHomework\\src\\studentSystem\\db\\teacher.txt";
+    private static String file_path = "/Users/dinghu/Documents/JavaProject/javaHomework/src/studentSystem/db/teacher.txt";
 
     /**
      * 读文件

@@ -1,0 +1,83 @@
+22.学生成绩管理系统（3人）
+
+学生成绩管理系统，主要用于对学生的学号、姓名等自然信息以及各项学科成绩进行增、删、改、查等操作，
+并且还可对使用该系统的用户进行登录名和密码的管理。
+
+用户分为教师和学生两大类。
+1．安全验证模块
+
+
+2．学生成绩管理模块
+   (1)创建学生成绩信息    (2)增加学生成绩    (3)删除学生成绩信息。
+   (4)修改学生成绩信息    (5)查询学生成绩    (6)学生成绩排行浏览
+
+3．用户管理模块
+    (1)创建用户信息文件。    (2)增加新用户    (3)删除用户
+    (4)修改用户  (5)浏览用户信息。
+
+总体分析：
+用户分析：该用户只有2中用户，一个为学生，另一个为教师。2个角色都有相同的特征（比如：用户名，姓名等等）
+所以使用一个User作为父类，将Teacher Student 作为User的子类继承相同的属性。因为教师和学生是属于不同的对象
+所以使用2个文件去存储对象的信息
+
+功能分析：大致的功能可以分为对数据的查询、修改、增加、删除。所以只需要对存储文件进行增删改查就可以，文件主要模拟的是数据库
+小组通过实现各个功能的工具函数，让程序变得更加的美观。
+
+
+安全验证类：
+每个用户会有一个identity，0表示老师，1表示学生。在老师的模块必须验证identity为0，部位0的无法进行访问
+比如查询所有学生的成绩， 查询所有学生信息等等
+
+
+用户管理模块
+（1）创建用户文件
+使用创建用户文件函数
+public static void createDataBase() throws IOException{}
+
+(2)增加新用户
+增加老师
+public static void addNewTeacher(Teacher teacher) throws IOException{}
+增加学生
+public static void addNewPer(Student per) throws IOException{}
+
+(3)删除用户
+删除学生
+public static boolean deleteStudentByNum(String studentNum) throws IOException {}
+删除老师
+public static boolean deleteTeacherByNum(String workNum) throws IOException {}
+
+(4)修改用户
+根据workNum修改老师信息
+public static boolean updateStudentByNum(String workNum, Teacher teacher) throws IOException {}
+根据studentNum修改学生信息
+public static boolean updateStudentByNum(String studentNum, Student student) throws IOException {}
+
+(5)浏览用户信息
+查询所有老师信息
+public static ArrayList<Teacher> showAllTeacher() throws IOException {}
+查询所有学生信息
+public static ArrayList<Student> showAllStudent() throws IOException {}
+根据职工号查询老师信息
+public static Teacher showPerTeacherByNum(String workNum) throws IOException {}
+根据学号查询学生信息
+public static Student showPerStudentByNum(String studentNum) throws IOException {}
+
+
+学生成绩管理模块
+(1)创建用户信息文件
+public static void createDataBase() throws IOException{}
+
+(2)增加学生成绩
+public static void addNewSub(Subject subject) throws IOException {}
+
+(3)删除学生成绩信息
+public static boolean deleteSubjectByNum(String studentNum) throws IOException {}
+
+(4)修改学生成绩信息
+public static boolean updateStudentByNum(String studentNum, Subject subject) throws IOException {}
+
+(5)查询学生成绩
+public static Subject showPerSubjectByNum(String studentNum) throws IOException {}
+public static ArrayList<Subject> showAllSubject() throws IOException {
+
+(6)学生成绩排行浏览

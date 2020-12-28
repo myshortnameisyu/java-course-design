@@ -1,6 +1,5 @@
 package studentSystem.utils;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
@@ -13,7 +12,6 @@ import studentSystem.pojo.Teacher;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 public class SimpleTools {

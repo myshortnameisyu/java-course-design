@@ -1,9 +1,7 @@
 package studentSystem.utils;
 
 import com.alibaba.fastjson.JSON;
-import studentSystem.MyException.UserIsExistException;
 import studentSystem.pojo.Admin;
-import studentSystem.pojo.Student;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -16,7 +14,7 @@ import java.util.ArrayList;
 public class AdminTool {
 
     // 模拟数据库
-    private static String file_path = "D:\\intellij IDEA\\javaHomework\\src\\studentSystem\\db\\admin.txt";
+    private static String file_path = "/Users/dinghu/Documents/JavaProject/javaHomework/src/studentSystem/db/admin.txt";
 
     /**
      * 读文件

@@ -3,14 +3,12 @@ package studentSystem.controller.teacher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import studentSystem.MyException.UserIsExistException;
-import studentSystem.MyException.UserNotFoundException;
+import studentSystem.myException.UserIsExistException;
+import studentSystem.myException.UserNotFoundException;
 import studentSystem.dto.StudentDTOData;
 import studentSystem.pojo.Student;
-import studentSystem.pojo.Teacher;
 import studentSystem.utils.SimpleTools;
 import studentSystem.utils.StudentTool;
-import studentSystem.utils.TeacherTool;
 
 import java.io.IOException;
 
@@ -138,7 +136,11 @@ public class TeacherQueryStudentController {
         simpleTools.setStudentTableViewData(studentTableView, simpleTools.getStudentTableViewData(), usernameTableColumn, passwordTableColumn,
                 nameTableColumn, sexTableColumn, ageTableColumn, phoneTableColumn, studentNumTableColumn);
         studentTableView.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> showStudentDetail(newValue)
+                (observable, oldValue, newValue) ->  {
+                    if (studentTableView.getSelectionModel().getSelectedIndex() >= 0){
+                        showStudentDetail(newValue);
+                    }
+                }
         );
     }
 

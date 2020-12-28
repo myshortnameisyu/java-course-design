@@ -3,7 +3,7 @@ package studentSystem.controller.teacher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import studentSystem.MyException.SubjectNotFoundException;
+import studentSystem.myException.SubjectNotFoundException;
 import studentSystem.pojo.Subject;
 import studentSystem.utils.SimpleTools;
 import studentSystem.utils.SubjectTool;
